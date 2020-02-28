@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Block\Product\ListProduct">
+        <plugin name="GhoSter_Quickview::list_product" type="GhoSter\Quickview\Plugin\Catalog\Product\ListProductPlugin"/>
+    </type>
+
+    <type name="Magento\CatalogWidget\Block\Product\ProductsList">
+        <plugin name="GhoSter_Quickview::catalog_widget" type="GhoSter\Quickview\Plugin\Catalog\Product\ListProductPlugin"/>
+    </type>
+
+    <type name="Magento\Catalog\Block\Product\AbstractProduct">
+        <plugin name="GhoSter_Quickview::redirect_to_cart_config" type="GhoSter\Quickview\Plugin\AbstractProductPlugin"/>
+    </type>
+
+    <type name="Magento\Framework\App\Config\ScopeConfigInterface">
+        <plugin name="GhoSter_Quickview::prevent_pop_up_after_add_cart" type="GhoSter\Quickview\Plugin\ScopeConfigPlugin"/>
+    </type>
+
+    <type name="Magento\Checkout\Controller\Cart\Add">
+        <plugin name="GhoSter_Quickview::add_cart_from_pop_up" type="GhoSter\Quickview\Plugin\CartAddPlugin"/>
+    </type>
+
+    <type name="Magento\Framework\View\Page\Config\Structure">
+        <plugin name="GhoSter_Quickview::remove_asset_if_disabled" type="GhoSter\Quickview\Plugin\PageConfigStructurePlugin"/>
+    </type>
+
+    <type name="Magento\Framework\View\Result\Page">
+        <plugin name="GhoSter_Quickview::add_handle_resultpage" type="GhoSter\Quickview\Plugin\ResultPagePlugin"/>
+    </type>
+</config>

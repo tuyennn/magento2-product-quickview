@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="catalog_product_view"/>
+    <update handle="ghoster_quickview_catalog_product_view" />
+    <body>
+        <referenceBlock name="view.product.detail" remove="true"/>
+        <referenceBlock name="product.info.options.wrapper.bottom">
+            <block ifconfig="ghoster_quickview/display/enable_view_detail" class="Magento\Catalog\Block\Product\View" after="product.info.addtocart" name="view.product.detail.configurable" as="view.product.detail.configurable" template="GhoSter_Quickview::view_detail.phtml"/>
+        </referenceBlock>
+    </body>
+</page>

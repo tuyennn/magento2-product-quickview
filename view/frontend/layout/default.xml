@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="GhoSter_Quickview::css/magnific-popup.css" />
+    </head>
+    <body>
+        <referenceContainer name="before.body.end">
+            <block class="GhoSter\Quickview\Block\Initialize"
+                   ifconfig="ghoster_quickview/display/enable_product_listing" name="ghoster.quickview.initialize" template="GhoSter_Quickview::initialize.phtml" />
+        </referenceContainer>
+    </body>
+</page>

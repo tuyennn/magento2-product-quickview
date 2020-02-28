@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <ghoster_quickview>
+            <general>
+                <enabled>1</enabled>
+            </general>
+            <display>
+                <category>.product-image-container, .product-item-photo, .cdz-product-top</category>
+                <enable_product_listing>1</enable_product_listing>
+                <enable_view_detail>1</enable_view_detail>
+            </display>
+        </ghoster_quickview>
+    </default>
+</config>

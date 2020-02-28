@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="ghoster" sortOrder="200">
+            <label>GhoSter Inc</label>
+        </tab>
+        <section id="ghoster_quickview" translate="label" sortOrder="160" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Product Quick View</label>
+            <tab>ghoster</tab>
+            <resource>GhoSter_Quickview::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Settings</label>
+                <field id="enabled" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="1" translate="label" type="select">
+                    <label>Enabled Module</label>
+                    <comment/>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="display" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Display Settings</label>
+                <field id="enable_product_listing" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Quick View on Product Listing</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable/Disable Quick View Category pages.</comment>
+                    <depends>
+                        <field id="*/general/enabled">1</field>
+                    </depends>
+                </field>
+
+                <field id="category" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Category Page Label Container</label>
+                    <comment>DOM-selector for Container</comment>
+                    <depends>
+                        <field id="*/general/enabled">1</field>
+                    </depends>
+                </field>
+
+                <field id="enable_view_detail" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable view detail button product</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable/Disable view detail Product button.</comment>
+                    <depends>
+                        <field id="*/general/enabled">1</field>
+                        <field id="enable_product_listing">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

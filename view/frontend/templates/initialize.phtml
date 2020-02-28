@@ -1,0 +1,15 @@
+<?php
+// @codingStandardsIgnoreFile
+/** @var $block \GhoSter\Quickview\Block\Initialize */
+?>
+<div data-ghoster-js="js-init">
+    <script type="text/x-magento-init">
+        {
+            "[data-ghoster-js='quickview-item-default']": {
+                "ghosterQuickViewDefault": {
+                   "baseUrl": "<?= $block->escapeHtml($block->getConfig()['baseUrl']); ?>"
+                }
+            }
+        }
+    </script>
+</div>

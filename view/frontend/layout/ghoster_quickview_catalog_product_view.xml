@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="catalog_product_view"/>
+    <body>
+        <referenceContainer name="div.sidebar.additional" remove="true"/>
+        <referenceBlock name="catalog.product.related" remove="true"/>
+        <referenceBlock name="product.info.upsell" remove="true"/>
+        <referenceBlock name="header.container" remove="true"/>
+        <referenceBlock name="footer-container" remove="true"/>
+        <referenceContainer name="sections.page.bottom" remove="true"/>
+        <referenceBlock name="breadcrumbs" remove="true"/>
+        <referenceBlock name="content.complete" remove="true"/>
+        <referenceBlock name="page.top" remove="true" />
+        <referenceBlock name="copyright" remove="true" />
+        <referenceBlock name="authentication-popup" remove="true" />
+        <referenceContainer name="page.messages" remove="true" />
+
+        <!-- Remove the short description -->
+        <referenceBlock name="product.info.overview">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string"/>
+            </action>
+        </referenceBlock>
+
+        <referenceBlock name="product.info.form.content">
+            <block ifconfig="ghoster_quickview/general/enable_view_detail" class="Magento\Catalog\Block\Product\View" after="product.info.addtocart" name="view.product.detail" as="view.product.detail" template="GhoSter_Quickview::view_detail.phtml"/>
+        </referenceBlock>
+
+        <referenceContainer name="before.body.end">
+            <block class="Magento\Framework\View\Element\Template" name="ghoster.quickview.beforebodyend" template="GhoSter_Quickview::script.phtml" />
+        </referenceContainer>
+
+        <referenceContainer name="product.info.social" remove="true"/>
+        <referenceBlock name="product.info.details" remove="true"/>
+
+        <!-- Magento 2.1 -->
+        <referenceBlock name="product.info.addtocart">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">GhoSter_Quickview::product/view/addtocart.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="product.info.addtocart.additional">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">GhoSter_Quickview::product/view/addtocart.phtml</argument>
+            </action>
+        </referenceBlock>
+        <!-- Magento 2.1 -->
+
+        <!-- Magento Enterprise GTM activated -->
+        <referenceBlock name="related_products_impression" remove="true"/>
+        <referenceBlock name="upsell_products_impression" remove="true"/>
+        <referenceBlock name="related_products_impression" remove="true"/>
+        <!-- Magento Enterprise GTM activated -->
+    </body>
+</page>

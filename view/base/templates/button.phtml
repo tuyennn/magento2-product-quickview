@@ -1,0 +1,27 @@
+<?php // @codingStandardsIgnoreFile ?>
+<?php
+    /** @var \Magento\Product\Model\Product  $product */
+    /** @var \GhoSter\Quickview\Block\QuickViewButton  $block */
+
+    $product = $block->getProduct();
+    $productId = $block->getProduct()->getId();
+    $key = $product->getTypeId() . '-' . $productId;
+?>
+<div class="ghoster-quickview-container
+            ghoster-quickview-container-<?= $block->escapeHtml($key); ?>
+            ghoster-quickview-for-<?= $block->escapeHtml($productId); ?>"
+     style="display: none;"
+     data-mage-init='{"GhoSter_Quickview/js/initQuickView":{
+         "mode": "cat",
+         "isAdminArea": "<?= /* @noEscape */ $block->isAdminArea(); ?>",
+         "config": <?= /* @noEscape */ $block->getJsonConfig(); ?>,
+         "productId": "<?= $block->escapeHtml($productId); ?>",
+         "selector": "<?= $block->escapeHtml('.ghoster-quickview-container-' . $key); ?>"
+     }}'>
+
+    <div class="quickview ghoster-quickview ghoster-quickview-text"
+        data-quickview-url="<?= /* @escapeNotVerified */ $block->getUrl('ghoster_quickview/catalog_product/view', ['id' => $product->getId()]) ?>"
+        data-ghoster-js="quickview-item-default">
+        <?= /* @escapeNotVerified */ __("Quick View") ?>
+    </div>
+</div>
