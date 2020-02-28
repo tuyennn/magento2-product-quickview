@@ -53,8 +53,8 @@ define([
 
             observer = new IntersectionObserver(function (entries) {
                 if (entries[0].isIntersecting) {
-                  self.execQuickView();
-                  observer.disconnect();
+                    self.execQuickView();
+                    observer.disconnect();
                 }
             });
 
