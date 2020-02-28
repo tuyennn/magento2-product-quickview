@@ -2,14 +2,14 @@
 
 namespace GhoSter\Quickview\Block;
 
+use GhoSter\Quickview\Model\Config;
 use Magento\Catalog\Model\Product;
 use Magento\Customer\Model\Context as CustomerContext;
 use Magento\Framework\App\Http\Context as HttpContext;
-use Magento\Framework\View\Element\Template\Context;
 use Magento\Framework\DataObject\IdentityInterface;
-use Magento\Framework\View\Element\Template;
 use Magento\Framework\Json\EncoderInterface;
-use GhoSter\Quickview\Model\Config;
+use Magento\Framework\View\Element\Template;
+use Magento\Framework\View\Element\Template\Context;
 
 /**
  * Class QuickViewButton for rendering the button
@@ -70,7 +70,6 @@ class QuickViewButton extends Template implements IdentityInterface
         ]);
     }
 
-
     /**
      * @return string
      */
@@ -101,7 +100,6 @@ class QuickViewButton extends Template implements IdentityInterface
 
     /**
      * @return array
-     * @throws \Magento\Framework\Exception\NoSuchEntityException
      */
     public function getCacheKeyInfo()
     {

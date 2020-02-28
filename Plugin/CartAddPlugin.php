@@ -36,7 +36,7 @@ class CartAddPlugin
      * @return mixed
      */
     public function afterExecute(
-        \Magento\Checkout\Controller\Cart\Add $subject,
+        Add $subject,
         $result
     ) {
 
@@ -45,9 +45,6 @@ class CartAddPlugin
         if (strpos($refererUrl, 'ghoster_quickview/catalog_product/view') !== false) {
             return $subject->getResponse()->representJson($this->jsonEncoder->encode([]));
         }
-
         return $result;
     }
-
-
 }

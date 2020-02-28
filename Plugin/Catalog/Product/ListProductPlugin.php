@@ -33,6 +33,7 @@ class ListProductPlugin
      * @param  $subject
      * @param $result
      * @return string
+     * @noinspection PhpUndefinedMethodInspection
      */
     public function afterToHtml(
         $subject,

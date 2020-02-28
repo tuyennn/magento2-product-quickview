@@ -2,13 +2,13 @@
 
 namespace GhoSter\Quickview\Observer;
 
-use Magento\Framework\Event\ObserverInterface;
 use Magento\Catalog\Api\ProductRepositoryInterface;
-use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\App\Request\Http as HttpRequest;
-use Magento\Store\Model\StoreManagerInterface;
 use Magento\Framework\Event\Observer;
+use Magento\Framework\Event\ObserverInterface;
+use Magento\Framework\Exception\NoSuchEntityException;
+use Magento\Store\Model\StoreManagerInterface;
 
 /**
  * Class AddUpdateHandlesObserver add handles types
@@ -71,7 +71,6 @@ class AddUpdateHandlesObserver implements ObserverInterface
             }
 
             $layout->getUpdate()->addHandle('ghoster_quickview_catalog_product_view_type_' . $product->getTypeId());
-
         }
 
         return $this;

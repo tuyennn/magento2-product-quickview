@@ -2,10 +2,10 @@
 
 namespace GhoSter\Quickview\Block;
 
-use Magento\Framework\View\Element\Template\Context;
-use Magento\Framework\Exception\NoSuchEntityException;
 use GhoSter\Quickview\Model\Config as QuickViewConfig;
+use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\View\Element\Template;
+use Magento\Framework\View\Element\Template\Context;
 
 /**
  * Class Initialize block init the js

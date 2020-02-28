@@ -47,13 +47,11 @@ class Renderer
         return $html;
     }
 
-
     private function generateHtml(Product $product)
     {
         if ($this->buttonBlock === null) {
             $this->buttonBlock = $this->layout->createBlock(QuickViewButton::class);
         }
-
         return $this->buttonBlock->setProduct($product)->toHtml();
     }
 }
