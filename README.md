@@ -4,9 +4,9 @@
 This Magento 2 extension provides quick view button, popup view the product from product list, widget.
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/bf0757d0063e489eb3bff2479964fce2)](https://www.codacy.com/app/GhoSterInc/AutoInstagramPost?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tuyennn/AutoInstagramPost&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a0c2c8faab694998abc3c90ad3e7cc98)](https://www.codacy.com/manual/GhoSterInc/ProductQuickView?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tuyennn/ProductQuickView&amp;utm_campaign=Badge_Grade)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/thinghost)
-[![Build Status](https://travis-ci.org/tuyennn/ProductQuickView.svg?branch=master)](https://travis-ci.org/tuyennn/AutoInstagramPost)
+[![Build Status](https://travis-ci.org/tuyennn/ProductQuickView.svg?branch=master)](https://travis-ci.org/tuyennn/ProductQuickView)
 ![Version 1.0.0](https://img.shields.io/badge/Version-1.0.0-green.svg)
 
 ---
